@@ -1,1 +1,1 @@
-# Google_Kickstart Practices
+# Algorhithm Practices
