@@ -1,28 +1,28 @@
 import math
 
-# Thu thap du lieu
-sotestcase = 1
-ketthuc = False
+# Data Collection
+test_case = 1
+over = False
 inps = []
-while sotestcase <= 1000 and not ketthuc:
+while test_case <= 1000 and not over:
 	inp = [float(i) for i in input().split()]
 	if inp == [0.0,0.0,0.0]:
-		ketthuc = True
+		over = True
 	else: inps.append(inp)
-	sotestcase += 1
+	test_case += 1
 
-# Tinh toan va thu thap ket qua
+# Data Analysis
 results = []
 
 for inp in inps:
 	r = inp[0]
 	m = inp[1]
 	c = inp[2]
-	dientichhinhtron = math.pi * (r**2)
-	dientichhinhvuong = (r*2)**2
-	estimatedarea = (dientichhinhvuong / m) * c
-	results.append(f"{dientichhinhtron} {estimatedarea}")
+	area_of_circle = math.pi * (r**2)
+	area_of_square = (r*2)**2
+	estimated_area = (area_of_square / m) * c
+	results.append(f"{area_of_circle} {estimated_area}")
 
-# In ket qua
+# Display Results
 for result in results:
 	print(result)
